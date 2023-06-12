@@ -8,8 +8,6 @@ Some scenarios are skipped because the web page gives an error "Oops! Looks like
 
 This error prevents the user from completing the booking process and verifying the details.
 
-Okay, here is the optimized instructions and the defect report:
-
 # Mail Travel Automation Project
 
 This project contains the automation test cases for the Mail Travel website using Cucumber, TestNG and Selenium.

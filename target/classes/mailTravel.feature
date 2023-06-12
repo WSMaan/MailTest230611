@@ -1,10 +1,13 @@
 Feature: Mail Travel Booking
 
-  @booking
-  Scenario: Book a tour to India with valid inputs
+  Background:
     Given I open a browser and navigate to "https://www.mailtravel.co.uk/"
+    And confirm the page title
     When I accept all cookies
-    And I enter "India" in the search bar and click on the search button
+
+  @valid_booking
+  Scenario: Book a tour to India with valid inputs
+    Given I enter "India" in the search bar and click on the search button
     When I select holiday package
     And I click on the book online button
     Then I should see an error message "Please select your departure date"
