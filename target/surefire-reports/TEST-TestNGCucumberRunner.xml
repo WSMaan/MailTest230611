@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="1" failures="1" name="TestNGCucumberRunner" time="16.339" errors="0" skipped="0">
+<testsuite tests="1" failures="0" name="TestNGCucumberRunner" time="16.654" errors="0" skipped="0">
   <properties>
     <property name="idea.version" value="2022.2.4"/>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
@@ -64,51 +64,5 @@
     <property name="sun.stdout.encoding" value="UTF-8"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase classname="TestNGCucumberRunner" name="runScenario" time="16.339">
-    <failure message="expected [https://www.newmarketholidays.co.uk/book/c/holidays?tourCode=98637&amp;dDate=2024-02-10&amp;dCode=&amp;adults=2&amp;children=0&amp;utm_source=DMR&amp;utm_medium=partner_referral&amp;deeplink=true#/Error] but found [https://www.mailtravel.co.uk/holiday/indias-golden-triangle-shimla-and-amritsars-golden-temple-exclusively-solos-d50c5ad7fbd04a98d656d673711d524a]" type="java.lang.AssertionError">java.lang.AssertionError: expected [https://www.newmarketholidays.co.uk/book/c/holidays?tourCode=98637&amp;dDate=2024-02-10&amp;dCode=&amp;adults=2&amp;children=0&amp;utm_source=DMR&amp;utm_medium=partner_referral&amp;deeplink=true#/Error] but found [https://www.mailtravel.co.uk/holiday/indias-golden-triangle-shimla-and-amritsars-golden-temple-exclusively-solos-d50c5ad7fbd04a98d656d673711d524a]
-	at org.testng.Assert.fail(Assert.java:111)
-	at org.testng.Assert.failNotEquals(Assert.java:1578)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
-	at org.testng.Assert.assertEquals(Assert.java:132)
-	at org.testng.Assert.assertEquals(Assert.java:656)
-	at org.testng.Assert.assertEquals(Assert.java:666)
-	at StepDef.MailTravelSteps.TheBookOnlineButton(MailTravelSteps.java:123)
-	at ✽.I click on the book online button again(file:///C:/Users/Maan9/IdeaProjects/MailTest4/MailTest/src/main/resources/mailTravel.feature:14)
-</failure>
-    <system-out>Configuring TestNG with: org.apache.maven.surefire.testng.conf.TestNG652Configurator@dfd3711
-
-@booking
-Scenario: Book a tour to India with valid inputs                         &amp;#27;[90m# src/main/resources/mailTravel.feature:4&amp;#27;[0m
-  &amp;#27;[32mGiven &amp;#27;[0m&amp;#27;[32mI open a browser and navigate to &amp;#27;[0m&amp;#27;[32m&amp;#27;[1m&quot;https://www.mailtravel.co.uk/&quot;&amp;#27;[0m &amp;#27;[90m# StepDef.MailTravelSteps.i_open_a_browser_and_navigate_to(java.lang.String)&amp;#27;[0m
-  &amp;#27;[32mWhen &amp;#27;[0m&amp;#27;[32mI accept all cookies&amp;#27;[0m                                              &amp;#27;[90m# StepDef.MailTravelSteps.accept_cookies()&amp;#27;[0m
-  &amp;#27;[32mAnd &amp;#27;[0m&amp;#27;[32mI enter &amp;#27;[0m&amp;#27;[32m&amp;#27;[1m&quot;India&quot;&amp;#27;[0m&amp;#27;[32m in the search bar and click on the search button&amp;#27;[0m   &amp;#27;[90m# StepDef.MailTravelSteps.enter_and_click_on_search_button(java.lang.String)&amp;#27;[0m
-  &amp;#27;[32mWhen &amp;#27;[0m&amp;#27;[32mI select holiday package&amp;#27;[0m                                          &amp;#27;[90m# StepDef.MailTravelSteps.click_on_package()&amp;#27;[0m
-  &amp;#27;[32mAnd &amp;#27;[0m&amp;#27;[32mI click on the book online button&amp;#27;[0m                                  &amp;#27;[90m# StepDef.MailTravelSteps.click_on_book_online_button()&amp;#27;[0m
-  &amp;#27;[32mThen &amp;#27;[0m&amp;#27;[32mI should see an error message &amp;#27;[0m&amp;#27;[32m&amp;#27;[1m&quot;Please select your departure date&quot;&amp;#27;[0m &amp;#27;[90m# StepDef.MailTravelSteps.error_message(java.lang.String)&amp;#27;[0m
-  &amp;#27;[32mWhen &amp;#27;[0m&amp;#27;[32mI select two passenger from the dropdown&amp;#27;[0m                          &amp;#27;[90m# StepDef.MailTravelSteps.select_passengers()&amp;#27;[0m
-  &amp;#27;[32mAnd &amp;#27;[0m&amp;#27;[32mI select a departure date from the calendar&amp;#27;[0m                        &amp;#27;[90m# StepDef.MailTravelSteps.select_departure_date()&amp;#27;[0m
-  &amp;#27;[32mThen &amp;#27;[0m&amp;#27;[32mI should see the tour price&amp;#27;[0m                                       &amp;#27;[90m# StepDef.MailTravelSteps.tour_price()&amp;#27;[0m
-  &amp;#27;[31mAnd &amp;#27;[0m&amp;#27;[31mI click on the book online button again&amp;#27;[0m                            &amp;#27;[90m# StepDef.MailTravelSteps.TheBookOnlineButton()&amp;#27;[0m
-      &amp;#27;[31mjava.lang.AssertionError: expected [https://www.newmarketholidays.co.uk/book/c/holidays?tourCode=98637&amp;dDate=2024-02-10&amp;dCode=&amp;adults=2&amp;children=0&amp;utm_source=DMR&amp;utm_medium=partner_referral&amp;deeplink=true#/Error] but found [https://www.mailtravel.co.uk/holiday/indias-golden-triangle-shimla-and-amritsars-golden-temple-exclusively-solos-d50c5ad7fbd04a98d656d673711d524a]
-	at org.testng.Assert.fail(Assert.java:111)
-	at org.testng.Assert.failNotEquals(Assert.java:1578)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
-	at org.testng.Assert.assertEquals(Assert.java:132)
-	at org.testng.Assert.assertEquals(Assert.java:656)
-	at org.testng.Assert.assertEquals(Assert.java:666)
-	at StepDef.MailTravelSteps.TheBookOnlineButton(MailTravelSteps.java:123)
-	at ✽.I click on the book online button again(file:///C:/Users/Maan9/IdeaProjects/MailTest4/MailTest/src/main/resources/mailTravel.feature:14)
-&amp;#27;[0m
-</system-out>
-    <system-err>SLF4J: Failed to load class &quot;org.slf4j.impl.StaticLoggerBinder&quot;.
-SLF4J: Defaulting to no-operation (NOP) logger implementation
-SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
-Starting ChromeDriver 114.0.5735.90 (386bc09e8f4f2e025eddae123f36f6263096ae49-refs/branch-heads/5735@{#1052}) on port 18815
-Only local connections are allowed.
-Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
-ChromeDriver was started successfully.
-Jun 11, 2023 12:57:07 PM org.openqa.selenium.remote.ProtocolHandshake createSession
-INFO: Detected dialect: W3C
-</system-err>
-  </testcase>
+  <testcase classname="TestNGCucumberRunner" name="runScenario" time="16.654"/>
 </testsuite>

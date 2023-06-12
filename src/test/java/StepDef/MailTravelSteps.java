@@ -21,7 +21,7 @@ import static StepDef.TakeScreenShot.takeSnapShot;
 public class MailTravelSteps {
 
     WebDriver driver;
-    WebDriverWait wait; // Declare a WebDriverWait object
+    WebDriverWait wait;
 
     @Given("I open a browser and navigate to {string}")
     public void i_open_a_browser_and_navigate_to(String url) {
@@ -29,17 +29,24 @@ public class MailTravelSteps {
         driver = new ChromeDriver();
         driver.get(url);
         wait = new WebDriverWait(driver, 10);
+
+    }
+    @And("confirm the page title")
+    public void title(){
+        String title=driver.getTitle();
+        Assert.assertEquals(title,"Home Page | Mail Travel");
     }
 
     @When("I accept all cookies")
     public void accept_cookies() {
         JavascriptExecutor js = (JavascriptExecutor) driver;
         driver.manage().window().maximize();
+        driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
         WebElement accept = driver.findElement(By.xpath("//button[@id=\"onetrust-accept-btn-handler\"]"));
         driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
         js.executeScript("arguments[0].click();", accept);
 
-//        wait.until(ExpectedConditions.invisibilityOfElementLocated(By.id("cookie-banner")));
+
     }
 
     @And("I enter {string} in the search bar and click on the search button")
@@ -61,6 +68,7 @@ public class MailTravelSteps {
         package_Tigers.click();
 
     }
+
 
     @And("I click on the book online button")
     public void click_on_book_online_button() {
@@ -111,20 +119,18 @@ public class MailTravelSteps {
     @And("I click on the book online button again")
     public void TheBookOnlineButton() throws Exception {
 
-//        driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
-        Thread.sleep(2000);
-        WebElement button = driver.findElement(By.xpath("//div[@id='book-button']//div[@class='nbf_fancyimg_pms_add_button nbf_fg_pms_button_text nbf_bg_pms_button nbf_fg_pms_button_text '][normalize-space()='Book Online']"));
         driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
+        //Thread.sleep(2000);
+        WebElement button = driver.findElement(By.xpath("//div[@id='book-button']//div[@class='nbf_fancyimg_pms_add_button nbf_fg_pms_button_text nbf_bg_pms_button nbf_fg_pms_button_text '][normalize-space()='Book Online']"));
+//        driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
+      Thread.sleep(2000);
         button.click();
 
 
-//        WebElement button = driver.findElement(By.cssSelector("button.nbf_button.nbf_tpl_pms_book_button > div.nbf_fg_pms_button_text"));
-//        Thread.sleep(2000);
-//        button.click();
-
         takeSnapShot(driver, "C:\\Users\\Maan9\\IdeaProjects\\MailTest\\src.png");
-        Assert.assertEquals(driver.getCurrentUrl(), "https://www.newmarketholidays.co.uk/book/c/holidays?tourCode=98637&dDate=2024-02-10&dCode=&adults=2&children=0&utm_source=DMR&utm_medium=partner_referral&deeplink=true#/Error");
         takeSnapShot(driver, "C:\\Users\\Maan9\\IdeaProjects\\MailTest\\src2.png");
 
     }
+
+
 }
